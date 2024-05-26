@@ -1,0 +1,14 @@
+<div class="over">
+    <div class="wrapper">
+        <form [formGroup]="signup" class="form-group">
+          <h2>REGISTER</h2>
+             <input type="email" placeholder="EmailId" class="cvar" formControlName="email"/>
+             <input type="password" placeholder="Password" class="cvar" formControlName="pass"/>
+             <input type="password" placeholder="Re-typePassword" class="cvar" formControlName="repass" />
+             <div class="btns">
+                  <button (click)="onsubmit(signup.value)" [disabled]="signup.invalid" class="glow-on-hover">Register</button>
+                  <button (click)="goToLogin()" id="logbt"class="glow-on-hover">Login</button>
+             </div>
+        </form>
+      </div>
+</div>

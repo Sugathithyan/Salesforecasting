@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    background-image: linear-gradient(to bottom right, rgb(33, 103, 149), rgb(169, 232, 210));
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    min-width: 316px;
+    height: 260px;
+}
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #ffffff !important;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+  h2{
+    text-align: center;
+    justify-content: center;
+    font-family: emoji;
+  }

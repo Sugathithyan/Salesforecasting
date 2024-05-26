@@ -1,0 +1,15 @@
+<div class="over">
+  <div class="wrapper">
+    <div class="center-block">
+      <form [formGroup]="login" class="form-group">
+        <h2>LOGIN PAGE</h2>
+           <input type="email" placeholder="EmailId" class="cvar" formControlName="email"/>
+           <input type="password" placeholder="Password" class="cvar" formControlName="pass"/>
+           <div class="btns">
+                <button (click)="onlogin(login.value)" [disabled]="login.invalid" class="glow-on-hover">Login</button>
+                <button (click)="goToSignup()" class="glow-on-hover">SignUp</button>
+           </div>
+      </form>
+    </div>
+  </div>
+</div>

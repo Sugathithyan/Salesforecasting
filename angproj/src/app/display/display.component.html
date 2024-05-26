@@ -1,0 +1,27 @@
+<p>
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="onback()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    <span>Sales Forecasting</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="routelogout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+  </p>
+<button mat-raised-button color="primary" (click)="getdata()" id="bt1">Forecast</button>
+<button mat-raised-button color="primary" (click)="formetrics()" id="bt2">Metrics Overview</button>
+<div class="wrdiv">
+    <div class="cdiv" [hidden]="!schar">
+        <canvas id="myChart" width="200" height="200"></canvas>
+    </div>
+    <div class="metdiv" [hidden]="!smet">
+      <h3>Overview of Metrics</h3>
+        <ul *ngFor="let m of ms">
+            <ul *ngFor="let i of m | keyvalue">
+                <li style="font-size:large ;"><b>{{i.key}}</b> :- {{i.value}}</li>
+            </ul>
+        </ul>
+    </div>
+</div>
